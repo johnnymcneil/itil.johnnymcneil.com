@@ -1,3 +1,3 @@
-export default ImgLoader = ({ src }) => {
+export default function ImgLoader({ src }) {
     return src
 }
