@@ -1,0 +1,9 @@
+@import '../styles/assembly.scss';
+
+.nav-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: $spacer;
+  font-size: 1.5rem;
+}

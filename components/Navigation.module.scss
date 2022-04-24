@@ -1,0 +1,179 @@
+@import '../styles/assembly.scss';
+
+
+@mixin common-nav {
+  width: 100%;
+  padding-inline-start: $spacer;
+  flex-grow: 1;
+  background-color: hsla(0, 0%, 90%, 0%);
+  color: $black;
+  font-size: 10pt;
+}
+
+
+$nav-items-height: 50vh;
+$nav-items-width: 300pt;
+
+
+.navigation {
+  background-color: hsla(0, 0%, 98%, 80%);
+  backdrop-filter: blur(10px);
+  .nav-items {
+    .nav-container {
+      @include common-nav();
+
+      display: flex;
+      flex-direction: column;
+
+      padding-block: $spacer / 2;
+    }
+
+    .nav-folder {
+      @include common-nav();
+
+      font-weight: $fw-bold;
+    }
+
+    .nav-link, .nav-link-active {
+      @include common-nav();
+      
+      font-weight: $fw;
+      padding-block: $spacer /2;
+
+      transition: all .1s ease-in-out;
+      
+      &:hover {
+        background-color: $primary;
+        color: $white;
+        border-radius: 10pt;
+        text-decoration: none;
+      }
+    }
+
+    .nav-link-active {
+      background-color: $black;
+      color: $white;
+      border-radius: 10pt;
+    }
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .toggle-label {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 899pt) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+
+      max-height: 0pt;
+      max-width: 0pt;
+
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      overflow-y: hidden;
+      padding: 0pt;
+
+      transition: all .25s ease-in-out;
+
+      
+    }
+
+    .toggle-label {
+      display: block;
+      
+      background-color: $white;
+      color: $black;
+
+      font-size: 1.5rem;
+      padding-inline: $spacer;
+      padding-block: $spacer / 2;
+    
+      cursor: pointer;
+    
+      border-radius: 7px;
+      transition: all 0.25s ease-out;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+      
+    .toggle:checked + .toggle-label + .nav-items {
+      max-height: calc(100vh - 52px);
+      max-width: $nav-items-width;
+      padding: $spacer;
+      overflow-y: scroll;
+    }
+  }
+}
+
+@media screen and (min-width: 900pt) {
+
+  .navigation {
+    position: relative;
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+  
+      max-width: 0pt;
+      height: 100vh;
+  
+      position: sticky;
+      top: 0;
+      left: 0;
+  
+      overflow-y: hidden;
+      padding: 0;
+  
+      transition: max-width .25s ease-in-out;
+    }
+    
+    .toggle:checked + .toggle-label + .nav-items {
+      max-height: 100vh;
+      max-width: $nav-items-width;
+      padding: $spacer;
+      overflow-y: scroll;
+    }
+    
+    .toggle-label {
+      display: block;
+      
+      position: absolute;
+      top: $spacer / 2;
+      left: calc(100% + $spacer / 2);
+      
+      background-color: $white;
+      color: $black;
+  
+      font-size: 1.5rem;
+      padding-inline: $spacer;
+      padding-block: $spacer / 2;
+    
+      cursor: pointer;
+    
+      border-radius: 7px;
+      transition: all 0.25s ease-out;
+  
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}

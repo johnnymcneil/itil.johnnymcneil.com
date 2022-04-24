@@ -1,7 +1,20 @@
 @import '../styles/assembly.scss';
 
+.footer {
+  font-size: $fs;
+  font-weight: $fw-bold;
+  padding-block: $spacer * 2;
+}
+
 .container {
+  position: relative;
   padding: $spacer;
-  max-width: 800pt;
+  max-width: 600pt;
   margin-inline: auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  gap: $spacer * 2;
 }

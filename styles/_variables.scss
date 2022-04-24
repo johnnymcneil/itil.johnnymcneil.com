@@ -5,14 +5,23 @@
 
 // Colors
 
-$body-bg: hsv(0, 0%, 100%);
-$primary: hsv(240, 90%, 100%);
+$primary: hsl(240, 90%, 50%);
+$white: hsl(0, 0%, 99%);
+$black: hsl(0, 0%, 1%);
+$light: hsl(200, 100%, 100%);
+$dark: hsl(200, 100%, 20%);
+
+$body-bg: $white;
+$body-color: $black;
 
 
 // Font
 
-$font-size: 12pt;
-$line-height: 1.15;
+$fs: 12pt;
+$fw: 400;
+$fw-bold: 700;
+
+$line-height: 1.5;
 
 
 // Headings

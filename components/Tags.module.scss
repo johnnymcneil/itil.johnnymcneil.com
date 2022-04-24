@@ -1,0 +1,22 @@
+@import '../styles/assembly.scss';
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  border-radius: 100pt;
+  overflow: hidden;
+  .tagKey, .tagValue {
+    padding-inline: $spacer / 1.5;
+    padding-block: $spacer / 3;
+  }
+  .tagKey {
+    background-color: hsl(0, 0%, 20%);
+    color: $white;
+  }
+  .tagValue {
+    color: $white;
+    background-color: hsl(0, 0%, 50%);
+  }
+}

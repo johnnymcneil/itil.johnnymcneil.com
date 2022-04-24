@@ -1,25 +1,17 @@
-import Link from 'next/link'
+import Head from 'next/head';
 import styles from './PageHeading.module.scss'
-import KeyValuePill from './KeyValuePill'
+import Tags from './Tags'
 
-export default function PageHeading({ title, stage, process}) {
-  var stagePill;
-  var processPill;
-
-  if (stage != null) {
-    stagePill = <KeyValuePill pillKey={'Stage'} pillValue={stage} />
-  }
-  
-  if (process != null) {
-    processPill = <KeyValuePill pillKey={'Process'} pillValue={process} />
-  }
-  
+export default function PageHeading({ note }) {
   return (
     <>
-      <h1>{ title }</h1>
+      <Head>
+        <title>{ note.name }</title>
+        { note.description != null ? <meta name="description" content={note.description} /> : '' }
+      </Head>
+      <h2>{ note.name }</h2>
       <div className={styles.pillContainer}>
-        { stage ? stagePill : '' }
-        { process ? processPill : '' }
+        <Tags dict={note.tags} />
       </div>
     </>
   )
