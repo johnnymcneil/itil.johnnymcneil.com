@@ -51,7 +51,7 @@ export default function FiveStages() {
           </tr>
         </tbody>
       </table>
-      <p><imgsrc={page6} /></p>
+      <p><img src={page6} /></p>
       <p>Each stage has its own unique set of processes and steps to ensure a healthy service lifecycle.</p>
 
       <LinkList heading='Next Up' linkList={nextUp} />
