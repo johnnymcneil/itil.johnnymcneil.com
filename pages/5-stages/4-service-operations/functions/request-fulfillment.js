@@ -4,7 +4,7 @@ import PageHeading from '../../../../components/PageHeading'
 import { Notes } from '../../../../contexts/notes'
 
 import Image from 'next/image'
-import ImgLoader from '../../loaders/ImgLoader'
+import ImgLoader from '../../../../loaders/ImgLoader'
 import reqFul from '../../../../assets/images/request-fulfillment.png'
 
 export default function RequestFulfillment() {

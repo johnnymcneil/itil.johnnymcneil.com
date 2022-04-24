@@ -4,7 +4,7 @@ import PageHeading from '../../../../components/PageHeading'
 import { Notes } from '../../../../contexts/notes'
 import Image from 'next/image'
 import matrix from '../../../../assets/images/Priority Matrix.png'
-import ImgLoader from '../../loaders/ImgLoader'
+import ImgLoader from '../../../../loaders/ImgLoader'
 
 export default function PriorityMatrix() {
   const note = Notes.PriorityMatrix

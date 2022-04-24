@@ -5,7 +5,7 @@ import PageHeading from '../../../../components/PageHeading';
 import { Notes } from '../../../../contexts/notes';
 import Image from 'next/image';
 import serviceOpsFlow from '../../../../assets/images/Service Operations Flow Chart.png'
-import ImgLoader from '../../loaders/ImgLoader'
+import ImgLoader from '../../../../loaders/ImgLoader'
 
 
 export default function ServiceOperationFunctions() {

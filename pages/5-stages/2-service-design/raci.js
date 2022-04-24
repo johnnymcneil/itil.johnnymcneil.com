@@ -3,7 +3,7 @@ import Layout from '../../../components/Layout'
 import LinkList from '../../../components/LinkList';
 import Image from 'next/image';
 import page26 from '../../../assets/images/page-26.png'
-import ImgLoader from '../../loaders/ImgLoader'
+import ImgLoader from '../../../loaders/ImgLoader'
 
 export default function RACI() {
   const note = Notes.RACI
