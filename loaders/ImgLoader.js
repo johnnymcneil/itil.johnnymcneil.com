@@ -1,3 +1,3 @@
-export const ImgLoader = ({ src }) => {
+export default ImgLoader = ({ src }) => {
     return src
 }
