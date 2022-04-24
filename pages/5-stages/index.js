@@ -4,7 +4,6 @@ import Layout from '../../components/Layout'
 import PageHeading from '../../components/PageHeading'
 import LinkList from '../../components/LinkList'
 import { Notes } from '../../contexts/notes'
-import ImgLoader from '../../loaders/ImgLoader'
 
 import page5 from '../../assets/images/page-5.png'
 import page6 from '../../assets/images/page-6.png'
@@ -19,7 +18,7 @@ export default function FiveStages() {
       <PageHeading note={note} />
       
       <p>
-        <Image loader={ImgLoader} src={page5} />
+        <img src={page5} />
       </p>
       <p>The ITIL Service Lifecycle goes through 5 Stages:</p>
       <table>
@@ -52,7 +51,7 @@ export default function FiveStages() {
           </tr>
         </tbody>
       </table>
-      <p><Image loader={ImgLoader}src={page6} /></p>
+      <p><imgsrc={page6} /></p>
       <p>Each stage has its own unique set of processes and steps to ensure a healthy service lifecycle.</p>
 
       <LinkList heading='Next Up' linkList={nextUp} />

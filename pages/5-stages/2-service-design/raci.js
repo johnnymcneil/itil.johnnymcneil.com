@@ -3,7 +3,6 @@ import Layout from '../../../components/Layout'
 import LinkList from '../../../components/LinkList';
 import Image from 'next/image';
 import page26 from '../../../assets/images/page-26.png'
-import ImgLoader from '../../../loaders/ImgLoader'
 
 export default function RACI() {
   const note = Notes.RACI
@@ -13,7 +12,7 @@ export default function RACI() {
     <Layout>
       <h1>RACI - Responsibilities MATRIX</h1>
       <p><strong>Stage2</strong><br />
-      <Image loader={ImgLoader} src={page26} /></p>
+      <img src={page26} /></p>
       <ul>
       <li><strong>Responsible</strong> -&gt; The person who does the work to achieve the task such as administrators and developers.</li>
       <li><strong>Accountable</strong> -&gt; The person who is accountable for the correct and thorough completion of the task, such as managers and directors.</li>
