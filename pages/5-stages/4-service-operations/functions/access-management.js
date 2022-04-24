@@ -6,7 +6,7 @@ import { Notes } from '../../../../contexts/notes';
 
 export default function AccessManagement() {
   const note = Notes.AccessManagement
-  const nextUp = []
+  const nextUp = [Notes.WhatIsItil]
   return (
     <Layout>
       
@@ -16,7 +16,7 @@ export default function AccessManagement() {
 
       <h2>Access Management Activites</h2>
       <ul>
-        <li>Request Access - Typically comes from the service desk via a <strong>service request</strong> (in <Link href={Notes.ServiceOperations.html}><a>Service Operations</a></Link>) or from a request for change (in <Link href={Notes.ServiceTransition.href}><a>Service Transition</a></Link>).</li>
+        <li>Request Access - Typically comes from the service desk via a <strong>service request</strong> (in <Link href={Notes.ServiceOperations.href}><a>Service Operations</a></Link>) or from a request for change (in <Link href={Notes.ServiceTransition.href}><a>Service Transition</a></Link>).</li>
         <li>Verification - Different levels of access may include different amounts of verification.</li>
         <li>Providing Rights</li>
         <li>Monitoring Identity Status</li>

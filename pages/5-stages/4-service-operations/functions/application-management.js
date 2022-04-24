@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function ApplicationManagement() {
   const note = Notes.ApplicationManagement
-  const nextUp = []
+  const nextUp = [Notes.WhatIsItil]
 
   return (
     <Layout>

@@ -4,7 +4,7 @@ import Layout from '../../../../components/Layout'
 import LinkList from '../../../../components/LinkList';
 
 export default function SCM() {
-  const note = Notes.SCM
+  const note = Notes.ServiceCatalogManagement
   const nextUp = [Notes.CapacityManagement]
   return (
     <Layout>

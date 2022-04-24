@@ -4,8 +4,8 @@ import { NavStructure } from '../contexts/NavStructure'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
+
 const renderNav = (navItems) => {
-    const router = useRouter()
     
     return navItems.map((item) => (
         <>
@@ -18,7 +18,7 @@ const renderNav = (navItems) => {
                         </div>
                     </div>
                 ) : (
-                    <NavItem item={item} active={router.asPath === item.href ? true : false} />
+                    <NavItem item={item} />
                 )
             }
         </>
@@ -34,7 +34,7 @@ export default function Navigation() {
     return (
         <div className={styles['navigation']}>
             <input id='collapsible' className={styles.toggle} type='checkbox' checked={showNav} />
-            <label htmlFor='collapsible' className={styles['toggle-label']} tabindex='0' onClick={toggleNav}>
+            <label htmlFor='collapsible' className={styles['toggle-label']} tabIndex='0' onClick={toggleNav}>
                 <i className='bi bi-list' />
             </label>
             <div className={styles['nav-items']}>

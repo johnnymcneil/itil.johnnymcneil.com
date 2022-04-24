@@ -6,7 +6,7 @@ import { Notes } from '../../../../contexts/notes'
 
 export default function TechnicalManagement() {
   const note = Notes.TechnicalManagement
-  const nextUp = []
+  const nextUp = [Notes.WhatIsItil]
   
   return (
     <Layout>

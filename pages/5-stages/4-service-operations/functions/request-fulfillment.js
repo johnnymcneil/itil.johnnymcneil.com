@@ -29,7 +29,7 @@ export default function RequestFulfillment() {
       </ul>
 
       <p><Image src={reqFul} /><br />
-      Image source: <a class="external-link" href="https://www.atlassian.com/itsm/service-request-management">https://www.atlassian.com/itsm/service-request-management</a></p>
+      Image source: <a href="https://www.atlassian.com/itsm/service-request-management">https://www.atlassian.com/itsm/service-request-management</a></p>
       <ol>
         <li>A customer requests service</li>
         <li>The IT service team assesses the request - does it need financial or business <strong>approval</strong>?</li>
