@@ -4,6 +4,7 @@ import PageHeading from '../../../../components/PageHeading'
 import { Notes } from '../../../../contexts/notes'
 
 import Image from 'next/image'
+import ImgLoader from '../../loaders/ImgLoader'
 import reqFul from '../../../../assets/images/request-fulfillment.png'
 
 export default function RequestFulfillment() {
@@ -28,7 +29,7 @@ export default function RequestFulfillment() {
         <li>Service Requests - Deal with requests for something new to be provided to the user (e.g. access to an online portal, a new version of software).</li>
       </ul>
 
-      <p><Image src={reqFul} /><br />
+      <p><Image loader={ImgLoader} src={reqFul} /><br />
       Image source: <a href="https://www.atlassian.com/itsm/service-request-management">https://www.atlassian.com/itsm/service-request-management</a></p>
       <ol>
         <li>A customer requests service</li>
