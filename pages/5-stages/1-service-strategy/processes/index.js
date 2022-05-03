@@ -1,7 +1,7 @@
-import Layout from '../../../components/Layout'
-import PageHeading from '../../../components/PageHeading';
-import { Notes } from '../../../contexts/notes';
-import LinkList from '../../../components/LinkList';
+import Layout from '../../../../components/Layout'
+import PageHeading from '../../../../components/PageHeading';
+import { Notes } from '../../../../contexts/notes';
+import LinkList from '../../../../components/LinkList';
 
 export default function ServiceStrategyProcesses() {
   const note = Notes.ServiceStrategyProcesses

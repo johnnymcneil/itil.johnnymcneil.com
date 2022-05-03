@@ -13,11 +13,11 @@ export const NavStructure = [
                 children: [
                     Notes.ServiceStrategy,
                     Notes.ServiceStrategyProcesses,
-                    {
-                        name: 'Processes of Stage 1',
-                        type: 'folder',
-                        children: [],
-                    },
+                    // {
+                    //     name: 'Processes of Stage 1',
+                    //     type: 'folder',
+                    //     children: [],
+                    // },
                 ],
             },
             {
