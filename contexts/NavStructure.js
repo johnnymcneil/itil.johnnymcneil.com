@@ -16,7 +16,17 @@ export const NavStructure = [
                     {
                         name: 'Processes of Stage 1',
                         type: 'folder',
+<<<<<<< Updated upstream
                         children: [],
+=======
+                        children: [
+                            Notes.ServiceManagement,
+                            Notes.FinancialManagement,
+                            Notes.ServicePortfolioManagement,
+                            Notes.DemandManagement,
+                            Notes.BusinessRelationshipManagement,
+                        ],
+>>>>>>> Stashed changes
                     },
                 ],
             },

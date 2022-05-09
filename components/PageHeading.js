@@ -9,7 +9,7 @@ export default function PageHeading({ note }) {
         <title>{ note.name }</title>
         { note.description != null ? <meta name="description" content={note.description} /> : '' }
       </Head>
-      <h2>{ note.name }</h2>
+      <h1>{ note.name }</h1>
       <div className={styles.pillContainer}>
         <Tags dict={note.tags} />
       </div>

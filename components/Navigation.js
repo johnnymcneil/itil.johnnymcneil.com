@@ -24,10 +24,14 @@ const renderNav = (navItems) => {
         </>
     ))
 }
-
+const storeState = (stateValue) => {
+    localStorage.setItem()
+}
 export default function Navigation() {
-    const [showNav, setShowNav] = useState(true)
+    const stateInStorage = localStorage.getItem( 'NavVisibile' )
+    const [showNav, setShowNav] = useState(stateInStorage ? stateInStorage : true)
     const toggleNav = () => {
+        localStorage.setItem( 'NavVisible', !showNav)
         setShowNav(!showNav)
     }
 

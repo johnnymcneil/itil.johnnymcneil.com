@@ -25,6 +25,51 @@ export const Notes = {
             Stage: 1
         }
     },
+    ServiceManagement: {
+        name: 'Service Management',
+        type: 'note',
+        href: '/5-stages/1-service-strategy/processes/service-management',
+        tags: {
+            Stage: 1,
+            Process: 1
+        }
+    },
+    FinancialManagement: {
+        name: 'Financial Management',
+        type: 'note',
+        href: '/5-stages/1-service-strategy/processes/financial-management',
+        tags: {
+            Stage: 1,
+            Process: 2
+        }
+    },
+    ServicePortfolioManagement: {
+        name: 'Service Portfolio Management (SPM)',
+        type: 'note',
+        href: '/5-stages/1-service-strategy/processes/service-portfolio-management',
+        tags: {
+            Stage: 1,
+            Process: 3
+        }
+    },
+    DemandManagement: {
+        name: 'Demand Management',
+        type: 'note',
+        href: '/5-stages/1-service-strategy/processes/demand-management',
+        tags: {
+            Stage: 1,
+            Process: 4
+        }
+    },
+    BusinessRelationshipManagement: {
+        name: 'Business Relationship Management',
+        type: 'note',
+        href: '/5-stages/1-service-strategy/processes/business-relationship-management',
+        tags: {
+            Stage: 1,
+            Process: 5
+        }
+    },
     ServiceDesign: {
         name: 'Service Design',
         type: 'note',
