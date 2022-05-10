@@ -5,11 +5,19 @@
 
 // Colors
 
-$primary: hsl(240, 90%, 50%);
 $white: hsl(0, 0%, 99%);
 $black: hsl(0, 0%, 1%);
+
+$primary: hsl(40, 100%, 50%);
 $light: hsl(200, 100%, 100%);
 $dark: hsl(200, 100%, 20%);
+
+$surface: hsl(0, 3, 13);
+$surface-dark: hsl(0, 3, 8);
+$surface-light: hsl(0, 3, 18);
+
+$surface-color: hsl(0, 3, 90);
+$surface-link: hsl(190, 60%, 50%);
 
 $body-bg: $white;
 $body-color: $black;
@@ -17,7 +25,7 @@ $body-color: $black;
 
 // Font
 
-$fs: 12pt;
+$fs: 14pt;
 $fw: 400;
 $fw-bold: 700;
 
@@ -37,3 +45,7 @@ $h6-font-size: 18pt;
 // Spacing
 
 $spacer: 1rem;
+
+
+// Layout Header
+$header-height: 64px;

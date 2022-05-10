@@ -12,42 +12,18 @@ body {
 }
 
 body {
-  background-color: $body-bg;
+  background-color: $surface;
   color: $body-color;
   line-height: $line-height;
 }
 
 a {
-  color: $primary;
+  color: $surface-link;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-}
-
-h1 {
-  font-size: $h1-font-size;
-}
-
-h2 {
-  font-size: $h2-font-size;
-}
-
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
-h6 {
-  font-size: $h6-font-size;
 }
 
 h1,
@@ -56,11 +32,41 @@ h3,
 h4,
 h5,
 h6 {
-  padding: none;
+  margin: 0;
+  padding: 0;
   vertical-align: middle;
+  line-height: 1;
+  &:not(:first-child) {
+    margin-top: 48pt;
+  }
 }
 
-img {
-  width: 100%;
-  height: auto;
+h1 {
+  font-size: $h1-font-size;
+  margin-block-end: $h1-font-size / 4;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  margin-block-end: $h2-font-size / 4;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  margin-block-end: $h3-font-size / 4;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  margin-block-end: $h4-font-size / 4;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  margin-block-end: $h5-font-size / 4;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  margin-block-end: $h6-font-size / 4;
 }

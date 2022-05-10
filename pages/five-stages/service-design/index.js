@@ -24,7 +24,7 @@ export default function ServiceDesign() {
           <li>The design of the measurement methods and <strong>metrics</strong> of the services.</li>
         </ol>
 
-        <h2>The 7 Processes of Service Design</h2>
+        <h2>Processes</h2>
         <ol>
           <li><Link href={Notes.SLM.href}><a>Service Level Management (SLM)</a></Link></li>
           <li><Link href={Notes.ServiceCatalogManagement.href}><a>Service Catalog Management</a></Link></li>

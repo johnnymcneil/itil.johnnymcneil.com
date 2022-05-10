@@ -1,15 +1,6 @@
-/**
- * Next.js Configuration
- */
-const nextConfig = require('next-optimized-images')
+/** @type {import('next').NextConfig} */
 
-module.exports = nextConfig({
-  // Next Optimized Images
+const nextConfig = {
+}
 
-  // Next.js
-  reactStrictMode: true,
-  images: {
-    loader: 'custom',
-    disableStaticImages: true
-  }
-})
+module.exports = nextConfig

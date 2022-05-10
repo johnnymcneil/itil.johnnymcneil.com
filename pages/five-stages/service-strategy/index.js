@@ -7,6 +7,21 @@ import Link from 'next/link'
 export default function ServiceStrategy() {
   const note = Notes.ServiceStrategy
   const nextUp = [Notes.ServiceStrategyProcesses]
+  const processes = [
+    Notes.ServiceManagement,
+    Notes.FinancialManagement,
+    Notes.ServicePortfolioManagement,
+    Notes.DemandManagement,
+    Notes.BusinessRelationshipManagement
+  ]
+  const processLi = []
+  processes.forEach((process) => {
+    processLi.push(
+      <li>
+        <a href={process.href}>{process.name}</a>
+      </li>
+    )
+  })
   return (
     <Layout>
 
@@ -18,6 +33,12 @@ export default function ServiceStrategy() {
       <p>Fitness for <strong>Purpose</strong>; refers to <strong>functionality</strong> offered by a product or service to meet a particular need.</p>
       <h2>Warranty</h2>
       <p>Fitness for <strong>Use</strong>; refers to the <strong>assurance</strong> that a product or service will meet agreed requirements.</p>
+
+      <h2>Processes</h2>
+      
+      <ol>
+        { processLi }
+      </ol>
 
       <LinkList heading='Next Up' linkList={nextUp} />
 

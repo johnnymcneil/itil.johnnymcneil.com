@@ -1,43 +1,34 @@
+import { useContext, useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
+import { NavState } from '../contexts/NavState'
+import { NavStructure } from '../contexts/NavStructure'
+
 import styles from './Navigation.module.scss'
 import NavItem from './NavItem'
-import { NavStructure } from '../contexts/NavStructure'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-
-
-const renderNav = (navItems) => {
-    
-    return navItems.map((item) => (
-        <>
-            {
-                item.children ? (
-                    <div className={styles['nav-folder']}>
-                        {item.name}
-                        <div className={styles['nav-container']}>
-                            { renderNav(item.children) }
-                        </div>
-                    </div>
-                ) : (
-                    <NavItem item={item} />
-                )
-            }
-        </>
-    ))
-}
 
 export default function Navigation() {
-    const [showNav, setShowNav] = useState(true)
-    const toggleNav = () => {
-        setShowNav(!showNav)
+    const navContext = useContext(NavState)
+    const renderNav = (navItems) => {        
+        return navItems.map((item) => (
+            <>
+                {
+                    item.children ? (
+                        <>
+                            <NavItem item={item.note} active={navContext.router.asPath === item.note.href ? true : false} />
+                            <div className={styles['nav-group']}>
+                                { renderNav(item.children) }
+                            </div>
+                        </>
+                    ) : (
+                        <NavItem item={item} active={navContext.router.asPath === item.href ? true : false} />
+                    )
+                }
+            </>
+        ))
     }
-
     return (
-        <div className={styles['navigation']}>
-            <input id='collapsible' className={styles.toggle} type='checkbox' checked={showNav} />
-            <label htmlFor='collapsible' className={styles['toggle-label']} tabIndex='0' onClick={toggleNav}>
-                <i className='bi bi-list' />
-            </label>
-            <div className={styles['nav-items']}>
+        <div className={ styles['nav-menu'] }>
+            <div className={ styles.nav }>
                 { renderNav(NavStructure) }
             </div>
         </div>
