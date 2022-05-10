@@ -18,7 +18,7 @@ export default function FiveStages() {
       <PageHeading note={note} />
       
       <p>
-        <Image src={page5} layout='fill' />
+        <Image src={page5} layout='fill' objectFit='contain' />
       </p>
       <p>The ITIL Service Lifecycle goes through 5 Stages:</p>
       <table>
@@ -51,7 +51,7 @@ export default function FiveStages() {
           </tr>
         </tbody>
       </table>
-      <p><Image src={page6} layout='fill' /></p>
+      <p><Image src={page6} layout='fill' objectFit='contain' /></p>
       <p>Each stage has its own unique set of processes and steps to ensure a healthy service lifecycle.</p>
 
       <LinkList heading='Next Up' linkList={nextUp} />

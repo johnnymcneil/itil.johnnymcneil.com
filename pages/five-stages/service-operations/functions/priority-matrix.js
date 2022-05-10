@@ -18,7 +18,7 @@ export default function PriorityMatrix() {
       <p>Insert slide here</p>
       </blockquote>
 
-      <p><Image src={matrix} layout='fill' /></p>
+      <p><Image src={matrix} layout='fill' objectFit='contain' /></p>
       
       <h2>Priority Matrix Explained</h2>
       <table>

@@ -18,7 +18,7 @@ export default function ServiceOperationFunctions() {
 
       <h1>Service Operation Functions</h1>
       <p><strong>Stage4</strong></p>
-      <p><Image src={serviceOpsFlow} layout='fill' /></p>
+      <p><Image src={serviceOpsFlow} layout='fill' objectFit='contain' /></p>
       <p>A function is a team or group of people who perform a set of activities.</p>
       <ul>
         <li><Link href={Notes.ServiceDesk.href}><a>Service Desk</a></Link></li>
