@@ -14,7 +14,7 @@ export default function RACI() {
 
       <PageHeading note={note} />
 
-      <Image src={page26} layout='fill' objectFit='contain' />
+      <Image src={page26} layout='responsive' />
       <ul>
       <li><strong>Responsible</strong> -&gt; The person who does the work to achieve the task such as administrators and developers.</li>
       <li><strong>Accountable</strong> -&gt; The person who is accountable for the correct and thorough completion of the task, such as managers and directors.</li>

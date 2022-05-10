@@ -28,7 +28,7 @@ export default function RequestFulfillment() {
         <li>Service Requests - Deal with requests for something new to be provided to the user (e.g. access to an online portal, a new version of software).</li>
       </ul>
 
-      <p><Image src={reqFul} layout='fill' objectFit='contain' /><br />
+      <p><Image src={reqFul} layout='responsive' /><br />
       Image source: <a href="https://www.atlassian.com/itsm/service-request-management">https://www.atlassian.com/itsm/service-request-management</a></p>
       <ol>
         <li>A customer requests service</li>
