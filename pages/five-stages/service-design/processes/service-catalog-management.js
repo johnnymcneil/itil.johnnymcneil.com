@@ -4,16 +4,13 @@ import Layout from '../../../../components/Layout'
 import LinkList from '../../../../components/LinkList';
 
 export default function SCM() {
-  const note = Notes.SCM
+  const note = Notes.ServiceCatalogManagement
   const nextUp = [Notes.CapacityManagement]
   return (
     <Layout>
 
       <PageHeading note={note} />
-
-      <h1>Service Catalog Management</h1>
       
-      <p><strong>Stage2  Process2</strong></p>
       <p>Service catalog management ensures that an accurate and up-to-date service catalog is available to all parties authorized to see it. All parts of IT Service Management, as well as customers and users, use the service catalog.</p>
       <p><strong>Accuracy</strong> and <strong>availability</strong> are essential.</p>
       

@@ -4,7 +4,7 @@ import { Notes } from '../../../../contexts/notes';
 import LinkList from '../../../../components/LinkList';
 
 export default function FinancialManagement() {
-  const note = Notes.ServiceStrategyProcesses
+  const note = Notes.FinancialManagement
   const nextUp = [Notes.ServicePortfolioManagement]
 
   return (

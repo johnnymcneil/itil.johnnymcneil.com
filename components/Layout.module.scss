@@ -1,10 +1,199 @@
 @import '../styles/assembly.scss';
 
-.footer {
-  font-size: $fs;
-  font-weight: $fw-bold;
-  padding-block: $spacer * 2;
+$scroll-height: 20px;
+$scroll-width: 20px;
+$scroll-thumb-color: scale-color($surface, $lightness: 30%);
+$scroll-track-border-color: scale-color($surface, $lightness: 20%);
+
+.header {  
+  background: linear-gradient(to bottom right, $surface, $surface-dark);
+  color: $surface-color;
+  height: $header-height;
+  width: 100vw;
+  padding-inline: $spacer;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    z-index: 10;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 100vw;
+    margin-inline-start: -$spacer;
+    background: linear-gradient(to right, hsl(40, 100%, 70%) 0%, hsl(40, 100%, 50%) 100%);
+  }
+
+  .navToggle {
+    $dim: $header-height - 16px;
+    font-size: 24px;
+    line-height: $dim;
+    text-align: center;
+    width: $dim;
+    height: $dim;
+    background-color: $surface-light;
+    border-radius: $spacer / 2;
+    &:hover {
+      background-color: $primary;
+      color: $surface-dark;
+      cursor: pointer;
+    }
+  }
+
+  .headerTitle {
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 1pt;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (max-width: 767px) {
+      font-size: 12pt;
+    }
+  }
 }
+
+.page {
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  background: $surface;
+  color: $surface-color;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  padding-block-start: $header-height;
+
+
+  .col {
+    @media screen and (max-width: 767px) {
+      width: 100vw;
+      flex: 1 1 auto;
+    }
+    @media screen and (min-width: 768px) {
+
+    }
+    max-height: calc(100vh - $header-height);
+    overflow-y: auto;
+    
+
+    &::-webkit-scrollbar {
+      width: $scroll-width;
+    }
+    
+
+    &::-webkit-scrollbar-track {
+      background: rgba($black, 0.25);
+    }
+    
+
+    &::-webkit-scrollbar-thumb {
+      background: $scroll-thumb-color;
+      background-clip: padding-box;
+      box-shadow: (
+        inset 3px 3px 3px scale-color($scroll-thumb-color, $lightness: 25%),
+        inset -3px -3px 3px scale-color($scroll-thumb-color, $lightness: -25%)
+      );
+      border-radius: $scroll-width;
+      border: calc($scroll-width / 4) solid rgba(0, 0, 0, 0);
+    }
+
+  }
+
+  
+  .col-nav {
+    @media screen and (max-width: 767px) {
+      backdrop-filter: blur(10px);
+      height: 50vh;
+      z-index: 5;
+    }
+    @media screen and (min-width: 768px) {
+      flex-shrink: 0;
+      max-width: fit-content;
+    }
+    background-color: $surface-dark;
+    padding-inline-start: $spacer;
+    padding-block: $spacer * 2;
+    position: relative;
+    transition: all .25s linear;
+
+
+    &.collapsed {
+      @media screen and (max-width: 767px) {
+        height: 0;
+        padding-block: 0;
+      }
+      @media screen and (min-width: 768px) {
+        width: 0;
+        padding-inline: 0;
+      }
+    }
+
+
+    &.expanded {
+      @media screen and (max-width: 767px) {
+        height: 100vh;
+      }
+      @media screen and (min-width: 768px) {
+        width: 100%;
+      }
+    }
+
+
+    &::-webkit-scrollbar-track {
+      background: rgba($black, 0);
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($scroll-thumb-color, 0);
+      box-shadow: none;;
+    }
+
+
+    &:hover {
+      &::-webkit-scrollbar-track {
+        background: rgba($black, 0.25);
+      }
+
+
+      &::-webkit-scrollbar-thumb {
+        background: $scroll-thumb-color;
+        background-clip: padding-box;
+        box-shadow: (
+          inset 3px 3px 3px scale-color($scroll-thumb-color, $lightness: 25%),
+          inset -3px -3px 3px scale-color($scroll-thumb-color, $lightness: -25%)
+        );
+      }
+    }
+  }
+
+
+  .col-main {
+    @media screen and (min-width: 767px) {
+      
+    }
+    @media screen and (max-width: 768px) {
+      height: 100vh;
+    }
+    flex-grow: 1;
+    font-size: $fs;
+    line-height: $line-height;
+    padding: $spacer * 2;
+  }
+  
+}
+
 
 .container {
   position: relative;
@@ -13,8 +202,9 @@
   margin-inline: auto;
 }
 
-.page {
-  display: flex;
-  flex-direction: row;
-  gap: $spacer * 2;
+
+.footer {
+  font-size: $fs;
+  font-weight: $fw-bold;
+  padding-block: $spacer * 2;
 }
