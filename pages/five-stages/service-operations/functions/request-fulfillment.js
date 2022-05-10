@@ -4,7 +4,7 @@ import PageHeading from '../../../../components/PageHeading'
 import { Notes } from '../../../../contexts/notes'
 
 import Image from 'next/image'
-import reqFul from '../../../../assets/images/request-fulfillment.png'
+import reqFul from '../../../../public/images/request-fulfillment.png'
 
 export default function RequestFulfillment() {
   const note = Notes.RequestFulfillment
@@ -28,7 +28,7 @@ export default function RequestFulfillment() {
         <li>Service Requests - Deal with requests for something new to be provided to the user (e.g. access to an online portal, a new version of software).</li>
       </ul>
 
-      <p><img src={reqFul} /><br />
+      <p><Image src={reqFul} layout='fill' /><br />
       Image source: <a href="https://www.atlassian.com/itsm/service-request-management">https://www.atlassian.com/itsm/service-request-management</a></p>
       <ol>
         <li>A customer requests service</li>

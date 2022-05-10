@@ -3,7 +3,7 @@ import LinkList from '../../../../components/LinkList'
 import PageHeading from '../../../../components/PageHeading'
 import { Notes } from '../../../../contexts/notes'
 import Image from 'next/image'
-import matrix from '../../../../assets/images/Priority Matrix.png'
+import matrix from '../../../../public/images/Priority Matrix.png'
 
 export default function PriorityMatrix() {
   const note = Notes.PriorityMatrix
@@ -18,7 +18,7 @@ export default function PriorityMatrix() {
       <p>Insert slide here</p>
       </blockquote>
 
-      <p><img src={matrix} /></p>
+      <p><Image src={matrix} layout='fill' /></p>
       
       <h2>Priority Matrix Explained</h2>
       <table>
