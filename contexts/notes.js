@@ -311,7 +311,7 @@ export const Notes = {
     RACI: {
         name: 'RACI Responsibilities Matrix',
         type: 'note',
-        href: 'raci',
+        href: '/raci',
         tags: {
             Stage: 2
         }
