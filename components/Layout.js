@@ -52,7 +52,7 @@ export default function Layout({ children })  {
     <>
       <div className={ styles.header }>
         <div className={ styles.navToggle } onClick={ toggleNav }>
-          <i class="bi bi-list" />
+          <i className="bi bi-list" />
         </div>
         <div className={ styles.headerTitle }>
           ITIL Fundamentals
